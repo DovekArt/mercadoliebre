@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/img/logo.ico" rel="icon" type="image/x-icon">
+        <title>MercadoLiebre - Registro</title>
+        <!-- ==== GOOGLE FONTS ==== -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&amp;display=swap" rel="stylesheet">
+        <!-- ==== FONT AWESOME ==== -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <!-- ==== APP STYLES ==== -->
+        <link rel="stylesheet" href="/css/style.css"></link>
+    </head>
+    <body>
+        <header class="bg-accent">
+            <nav class="navbar navbar-expand-md navbar-light bg-accent">
+                <div class="container-fluid flex-wrap">
+                    <div class="logo">
+                        <a class="imgLogo" href="/"><img src="/img/logo-mercado-liebre.svg" alt="Logo Mercado Liebre"> </img></a>
+                    </div>
+                    <div class="barraBusqueda">
+                        <form class="barraBusqueda" action="/products/search" method="GET">
+                            <input class="inputBusqueda" type="search" name="barradebusqueda" placeholder="Buscar productos, marcas">
+                            <div class="vl"> 
+                                <button class="form-control fa fa-search" aria-hidden="true" type="submit" value="buscar"></button>
+                            </div>
+                        </form>
+                    </div>
+                    <p class="col-12 col-md-3 mt-3 text-center fs-6">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                        Comprá en cuotas y sin tarjeta de crédito
+                    </p>
+                    <div class="d-md-none col-12">
+                        <button class="d-block btn btn-primary mx-auto fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse col-12" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-7">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/register">
+                                    Crea tu cuenta
+                                    <i class="fa-solid fa-address-card"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/login">
+                                    Ingresá
+                                    <i class="fa-solid fa-right-to-bracket"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/me/cart">
+                                    Carrito
+                                    <span class="position-relative">
+                                        <i class="fa-solid fa-cart-shopping"> </i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="flex-fill container py-3">
+            <section class="contRegister">
+                <form class="registro" action="home.html" method="POST">
+                    <input class="inptRegister gral" type="text" name="nombre" placeholder="Nombre" minlength="3">
+                    <input class="inptRegister gral" type="text" name="apellido" placeholder="Apellido">
+                    <input class="inptRegister gral" type="text" name="usuario" placeholder="Nombre de usuario">
+                    <input class="inptRegister gral" type="email" name="email" placeholder="E-mail">
+                    <input class="inptRegister gral" type="password" name="contraseña" placeholder="Contraseña" minlength="8">
+                    <input class="inptRegister gral" type="password" name="contraseñart" placeholder="Confirmar contraseña" minlength="8">
+                    <div class="direccion">
+                        <input class="inptDirecc gral" type="text" name="direccion" placeholder="Calle">
+                        <input class="inptNum gral" type="text" name="número" placeholder="Número">
+                    </div>
+                    <div class="ciudPostal">
+                        <select class="inptCiudad gral" type="text" name="provincia">
+                            <option value="1">Buenos Aires</option>
+                            <option value="2">Capital Federal</option>
+                            <option value="3">Catamarca</option>
+                            <option value="4">Chaco</option>
+                            <option value="5">Chubut</option>
+                            <option value="6">Córdoba</option>
+                            <option value="7">Corrientes</option>
+                            <option value="8">Entre Ríos</option>
+                            <option value="9">Formosa</option>
+                            <option value="10">Jujuy</option>
+                            <option value="11">La Pampa</option>
+                            <option value="12">La Rioja</option>
+                            <option value="13">Mendoza</option>
+                            <option value="14">Misiones</option>
+                            <option value="15">Neuquén</option>
+                            <option value="16">Río Negro</option>
+                            <option value="17">Salta</option>
+                            <option value="18">San Juan</option>
+                            <option value="19">San Luis</option>
+                            <option value="20">Santa Cruz</option>
+                            <option value="21">Santa Fe</option>
+                            <option value="22">Santiago del Estero</option>
+                            <option value="23">Tierra del Fuego</option>
+                            <option value="24">Tucumán</option>
+                        </select>
+                        <input class="inptPostal gral" type="text" name="codPostal" placeholder="Código postal">
+                    </div>
+                    <p class="miniTitulos mtG">Fecha de nacimiento:</p>
+                    <div class="nacimiento">
+                        <input class="inptFecha gral" type="date" name="fechaNac" value="Fecha de Nacimiento">
+                    </div>
+                    <p class="tituloPU mtG">Perfil de usuario:</p>
+                    <div class="perfilUsuario">
+                        <input type="radio" name="perfil" value="comprador"> 
+                        <label>Comprador</label>
+                        <input type="radio" name="perfil" value="vendedor">
+                        <label>Vendedor</label>
+                    </div>
+                    <p class="tituloInt mtG">Intereses:</p>
+                    <div class="intereses">
+                        <input type="checkbox" name="interes" value="Electro">
+                        <label>Electro</label>
+                        <input type="checkbox" name="interes" value="Moda">
+                        <label>Moda</label>
+                        <input type="checkbox" name="interes" value="Hogar">
+                        <label>Hogar</label>
+                        <input type="checkbox" name="interes" value="Juguetería">
+                        <label>Juguetería</label>
+                        <input type="checkbox" name="interes" value="Fitness">
+                        <label>Fitness</label>
+                    </div>
+                    <p class="tituloFP mtG">Foto de perfil:</p>
+                    <input class="inptFoto" type="file" name="fotoPerfil" value="fotoPerfil">
+                    <button class="btnRegister" type="submit" value="Enviar">Registrarse</button>
+                    <button class="btnRegister" type="reset" value="Enviar">Clear</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <div class="cajaGrande">
+                <div class="uno">
+                    <i class="fa-solid fa-credit-card color-primary fs-4"></i>
+                    <h3>Pagá con tarjeta o efectivo</h3>
+                    <p>Con MercadoLiebreCash tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+                </div>
+                <div class="dos">
+                    <i class="fa-solid fa-gift color-primary fs-4"></i>
+                    <h3>Envío gratis desde los $ 2.500</h3>
+                    <p>Solo por estar registrado en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos</p>
+                </div>
+
+                <div class="dos">
+                    <i class="fa-solid fa-user-shield color-primary fs-4"></i>
+                    <h3>Seguridad de principio a fin</h3>
+                    <p>¿No te gusta? ¡Devolvelo! En MercadoLiebre no hay nada que no puedas hacer porque estás siempre protegid@.</p>
+                </div>
+            </div>
+            <div class="copyright">Copyright © 1999-2023 MercadoLiebre S.R.L.</div>
+        </footer>
+    </body>
+</html>
