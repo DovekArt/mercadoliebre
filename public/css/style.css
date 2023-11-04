@@ -29,8 +29,10 @@ a, a:hover {
 }
 
 .banner{
-    width: 100vw;
-    height: auto;
+    width: auto;
+}
+.banner img{
+    width: 100%;
 }
 
 .navBar{
@@ -557,6 +559,10 @@ dl, ol, ul {
     font-weight: 900;
 }
 
+.nav-list {
+    justify-content: space-between;
+}
+
 /* PRODUCTOS */
 
 .py-3 {
@@ -726,12 +732,20 @@ img, svg {
     transition: transform 1s;
 }
 
+.descripcion {
+    display: none;
+}
+
 .fa-truck:before {
     content: "\f0d1";
 }
 
 .product:hover {
     box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+
+.product:hover .descripcion {
+    display: block;
 }
 
 .product:hover .product-truck {
@@ -751,6 +765,11 @@ footer h3 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+}
+
+.cajaGrande div:hover i {
+    transform: scale(1.1);
+    opacity: .5;
 }
 
 /* RESPONSIVE */
@@ -864,6 +883,7 @@ footer h3 {
 
     .navbar-expand-md .navbar-nav {
         flex-direction: row;
+        min-width: max-content;
     }
 
     .navbar-expand-md .navbar-nav .nav-link {
@@ -885,8 +905,6 @@ footer h3 {
     div.dos {
         margin-left: 15%;
     }
-
-
 }
 
 @media only screen and (min-width: 992px){
